@@ -1,8 +1,20 @@
-import { Button, Typography } from "@mui/material";
+import { Button, styled, Typography } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { Add } from "@mui/icons-material";
 
 function App() {
+  const BlueButton = styled(Button)({
+    backgroundColor: "skyblue",
+    color: "#888",
+    margin: 5,
+    "&:hover": {
+      backgroundColor: "lightblue",
+    },
+    "&:disabled": {
+      backgroundColor: "gray",
+      color: "white",
+    },
+  });
   return (
     <div className="App">
       <Button variant="text">Text</Button>
@@ -23,23 +35,8 @@ function App() {
       <Typography variant="h1" component="h2">
         It uses h1 tag but it is an h2
       </Typography>
-      <Button
-        variant="contained"
-        sx={{
-          backgroundColor: "skyblue",
-          color: "#888",
-          margin: 5,
-          "&:hover": {
-            backgroundColor: "lightblue",
-          },
-          "&:disabled": {
-            backgroundColor: "gray",
-            color: "white",
-          },
-        }}
-      >
-        My custom button
-      </Button>
+      <BlueButton>My unique button</BlueButton>
+      <BlueButton>anothe button</BlueButton>
     </div>
   );
 }
