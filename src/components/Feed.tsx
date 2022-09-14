@@ -1,3 +1,9 @@
+import { Box } from "@mui/material";
+
 export const Feed = () => {
-  return <div>Feed</div>;
+  return (
+    <Box bgcolor="pink" flex={4} p={2}>
+      Feed
+    </Box>
+  );
 };

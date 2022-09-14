@@ -7,7 +7,7 @@ function App() {
   return (
     <Box>
       {/* navbar */}
-      <Stack direction="row" spacing={2} justifyContent="space-evenly">
+      <Stack direction="row" spacing={2} justifyContent="space-between">
         <Sidebar />
         <Feed />
         <Rightbar />
