@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Avatar,
   Badge,
   Box,
   InputBase,
@@ -24,6 +25,9 @@ const Search = styled("div")(({ theme }) => ({
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
+  display: "flex",
+  gap: "20px",
+  alignItems: "center",
 }));
 
 export const Navbar = () => {
@@ -45,6 +49,10 @@ export const Navbar = () => {
           <Badge badgeContent={2} color="error">
             <Notifications />
           </Badge>
+          <Avatar
+            sx={{ width: 30, height: 30 }}
+            src="http://placeimg.com/300/300/people"
+          />
         </Icons>
       </StyledToolbar>
     </AppBar>
