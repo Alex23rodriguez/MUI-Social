@@ -23,6 +23,23 @@ function App() {
       <Typography variant="h1" component="h2">
         It uses h1 tag but it is an h2
       </Typography>
+      <Button
+        variant="contained"
+        sx={{
+          backgroundColor: "skyblue",
+          color: "#888",
+          margin: 5,
+          "&:hover": {
+            backgroundColor: "lightblue",
+          },
+          "&:disabled": {
+            backgroundColor: "gray",
+            color: "white",
+          },
+        }}
+      >
+        My custom button
+      </Button>
     </div>
   );
 }
