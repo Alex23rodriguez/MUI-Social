@@ -1,14 +1,18 @@
+import { Box, Stack } from "@mui/material";
 import { Feed } from "./components/Feed";
 import { Rightbar } from "./components/Rightbar";
 import { Sidebar } from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="App">
-      <Sidebar />
-      <Feed />
-      <Rightbar />
-    </div>
+    <Box>
+      {/* navbar */}
+      <Stack direction="row" spacing={2} justifyContent="space-evenly">
+        <Sidebar />
+        <Feed />
+        <Rightbar />
+      </Stack>
+    </Box>
   );
 }
 
