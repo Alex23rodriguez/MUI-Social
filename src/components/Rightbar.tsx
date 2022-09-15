@@ -1,6 +1,7 @@
 import { Avatar, AvatarGroup, Box, Typography } from "@mui/material";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import { Conversations } from "./Conversations";
 
 const itemData = [
   {
@@ -82,20 +83,23 @@ export const Rightbar = () => {
           rowHeight={120}
           gap={5}
         >
-          {itemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-              />
-            </ImageListItem>
-          ))}
+          {itemData
+            .filter((_, i) => i < 6)
+            .map((item) => (
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            ))}
         </ImageList>
         <Typography variant="h6" fontWeight={100} mt={2} mb={2}>
           Latest Conversations
         </Typography>
+        <Conversations />
       </Box>
     </Box>
   );
