@@ -8,9 +8,11 @@ import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import Checkbox from "@mui/material/Checkbox";
 
 export const Feed = () => {
   return (
@@ -32,7 +34,7 @@ export const Feed = () => {
         />
         <CardMedia
           component="img"
-          height="194"
+          height="20%"
           image="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress"
           alt="Paella dish"
         />
@@ -44,9 +46,11 @@ export const Feed = () => {
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
-          </IconButton>
+          <Checkbox
+            aria-label="add to favorites"
+            icon={<FavoriteBorder />}
+            checkedIcon={<FavoriteIcon sx={{ color: "lightcoral" }} />}
+          />
           <IconButton aria-label="share">
             <ShareIcon />
           </IconButton>
