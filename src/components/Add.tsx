@@ -60,7 +60,8 @@ export const Add = () => {
         <Box
           width={{ xs: 200, sm: 400 }}
           height={{ xs: 340, sm: 280 }}
-          bgcolor="white"
+          bgcolor="background.default"
+          color="text.primary"
           p={3}
           borderRadius={5}
         >
